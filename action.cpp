@@ -37,7 +37,9 @@ while ((hours < 0) || wage < 0) ///This while loop checks to make sure users ent
 double Info::calcInfo()
 { if(hours >40)
     {
-    total = hours * wage*1.5; ///This works as time and a half for people who work more than 40 hours a week
+        overtime = (hours - 40) *1.5 * wage;///This works as time and a half for people who work more than 40 hours a week
+        total= set_hours *wage +overtime; ///total hours worked is equal to the set_hours (40)default times wage plus overtime.
+
     cout <<"Overtime included: "<<endl;
     }
     else {
@@ -51,10 +53,10 @@ void Info::printInfo()
     cout<< "Time worked: " << hours<<endl;
     cout<< "Salary is: " <<wage<<endl;
     cout<< "Total earned: " <<total<<endl;
-    outputFile << "---------------------------------------------------------\n";
+    outputFile << "-----------------------------------------------\n";
     outputFile <<"Name: "<<firstname<<" "<<lastname<<endl;
     outputFile <<"Time worked: " << hours<<endl;
     outputFile <<"Salary is: " <<wage<<endl;
     outputFile <<"Total earned: " <<total<<endl;
-    outputFile << "---------------------------------------------------------\n";
+    outputFile << "------------------------------------------------\n";
 }

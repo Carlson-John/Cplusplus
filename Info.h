@@ -11,8 +11,9 @@ public:
     double calcInfo();
     void printInfo();
 private:
-    double hours;
+    double hours,overtime;
     float wage,total;
+    double set_hours=40;
 
 
 string file,firstname,lastname;
