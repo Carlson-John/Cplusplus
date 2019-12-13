@@ -1,4 +1,4 @@
-# Cplusplus
+#Job pay calculator 
 This project was inspired from http://www.cplusplus.com/forum/beginner/3473/#msg14621
 
 
